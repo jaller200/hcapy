@@ -18,7 +18,7 @@ setup(
     url='https://github.com/CrescentApricot/hcapy',
     packages=find_packages(exclude=('tests',)),
     ext_modules=[
-        Extension("hcapy", sources=["module.pyx", "hca2wav/src/clHCA.cpp"], language="c++")
+        Extension("hcapy", sources=["module.pyx", "hca2wav/src/clHCA.cpp"], language="c++", extra_compile_args=["-std=c++11"])
     ],
     cmdclass={'build_ext': build_ext},
 )
